@@ -1,0 +1,45 @@
+.item {
+    width: 150px;
+    height: 200px;
+    border: 1px solid #b4b4b4;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    overflow: hidden; /* Обрезаем всё за пределами блока */
+    &:hover{
+        border-color: black;
+    }
+
+    & > span {
+        display: block;
+        
+    }
+
+    &__name{
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    &__price{
+        font-size: 17px;
+        font-weight: 400;
+    }
+    &__add-button{
+        outline: none;
+        background-color: #e6a146;
+        border:none;
+        padding: 5px;
+        width: 100%;
+        &:hover{
+            cursor: pointer;
+            background-color: #7146e6;
+        }
+    }
+    &__img{
+        width: 100px;
+        height: auto;
+    }
+}

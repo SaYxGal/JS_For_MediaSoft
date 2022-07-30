@@ -1,0 +1,95 @@
+.items-list{
+    &__items{
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        align-items:center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+    &__sortPanel{
+        &__slider{
+            height: 20px;
+            width: 100%;
+            border-radius: 5px;
+            -webkit-appearance: none; 
+            appearance: none;
+            background: #d3d3d3; 
+            outline: none; 
+            opacity: 0.7; 
+            -webkit-transition: .2s; 
+            transition: opacity .2s;
+            &:hover {
+                opacity: 1; 
+            }
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 17px; 
+                height: 17px; 
+                border-radius: 50%; 
+                background: #e6a146; 
+                cursor: pointer;
+            }
+            
+            &::-moz-range-thumb {
+                width: 17px;
+                height: 17px; 
+                background: #e6a146; 
+                border-radius: 50%; 
+                cursor: pointer; 
+            }
+        }
+        & > span{
+            font-size: 17px;
+            font-weight: bold;
+            height: 40px;
+        }
+        &__currentprice{
+            width: auto;
+            font-size: 17px;
+            font-weight: bold;
+            height: 40px;
+        }
+        &__search{
+            margin-bottom: 20px;
+        }
+        &__group{
+            display: flex;
+            flex-direction: row;
+            padding: auto;
+            margin-bottom: 20px;
+            & > span{
+                font-size: 15px;
+                font-weight: bold;
+                margin-right: 30%;
+            }
+            & > input{
+                margin-right: 1%;
+            }
+        }
+        & > button{
+            outline: none;
+            background-color: #e6a146;
+            padding: 5px;
+            width: 100%;
+            &:hover{
+                cursor: pointer;
+                background-color: #7146e6;
+        }
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background-color: white;
+        padding: 10px;
+        box-sizing: border-box;
+        width: 50%;
+    }
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 1em;
+    box-sizing: border-box;
+}

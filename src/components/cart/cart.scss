@@ -1,0 +1,31 @@
+.cart{
+    & > span{
+        display: block;
+        margin-top: 5px;
+    }
+    &__info{
+        width: auto;
+        outline: none;
+        background-color: #e6a146;
+        border:black;
+        padding: 5px;
+        &:hover{
+            cursor: pointer;
+            background-color: #7146e6;
+        }
+    }
+    &__clear{
+        width: auto;
+        margin-left: 10px;
+        outline: none;
+        background-color: #e6a146;
+        border:black;
+        padding: 5px;
+        &:hover{
+            cursor: pointer;
+            background-color: #7146e6;
+        }
+    }
+    margin: 10px auto;
+    text-align: center;
+}
