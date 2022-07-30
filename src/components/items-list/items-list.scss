@@ -7,6 +7,16 @@
         flex-direction: row;
         flex-wrap: wrap;
         margin: 0 auto;
+        background: repeating-linear-gradient(
+            45deg,
+            wheat,
+            wheat 10px,
+            #e9aa58 10px,
+            #e9aa58 20px
+        );
+        border: 3px solid #ff9100;
+        border-right: none;
+        border-radius: 3px;
     }
     &__sortPanel{
         &__slider{
@@ -82,7 +92,9 @@
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        background-color: white;
+        background-color: wheat;
+        border: 3px solid #ff9100;
+        border-radius: 3px;
         padding: 10px;
         box-sizing: border-box;
         width: 50%;

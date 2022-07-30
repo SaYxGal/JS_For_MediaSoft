@@ -6,8 +6,8 @@ const Cart = (cart, modal) =>{
     const ButtonsField = document.createElement('div')
     const openCart = document.createElement('button')
     const clearCart = document.createElement('button')
-    itemsCountElement.innerText = `Кол-во товаров ${cart.length}`
-    priceElement.innerText = `Цена ${cart.length}`
+    itemsCountElement.innerText = `Кол-во товаров: ${cart.length}`
+    priceElement.innerText = `Итоговая цена: ${cart.length}`
     CartElement.className = 'cart'
     itemsCountElement.className = 'cart__count'
     priceElement.className = 'cart__price'

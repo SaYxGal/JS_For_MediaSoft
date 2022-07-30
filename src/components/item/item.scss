@@ -1,7 +1,8 @@
 .item {
     width: 150px;
     height: 200px;
-    border: 1px solid #b4b4b4;
+    border: 1px solid #000000;
+    background-color: wheat;
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -10,7 +11,7 @@
     padding: 10px;
     overflow: hidden; /* Обрезаем всё за пределами блока */
     &:hover{
-        border-color: black;
+        border: 2px solid black;
     }
 
     & > span {

@@ -10,47 +10,56 @@ const mocks = [
     {
         "id": 1,
         "name": "notebook1",
-        "price": 100
+        "price": 100,
+        "picture": 1
     },
     {
         "id": 2,
         "name": "notebook2",
-        "price": 200
+        "price": 200,
+        "picture": 2
     },
     {
         "id": 3,
         "name": "notebook3",
-        "price": 300
+        "price": 300,
+        "picture": 3
     },
     {
         "id": 4,
         "name": "notebook4",
-        "price": 100
+        "price": 100,
+        "picture": 4
     },
     {
         "id": 5,
         "name": "notebook5",
-        "price": 200
+        "price": 200,
+        "picture": 1
     },
     {
         "id": 6,
         "name": "notebook6",
-        "price": 300
+        "price": 300,
+        "picture": 3
     },
     {
         "id": 7,
         "name": "notebook7555555555555555555555",
-        "price": 100
+        "price": 100,
+        "picture": 3
     },
     {
         "id": 8,
         "name": "notebook8",
-        "price": 200
+        "price": 200,
+        "picture": 4
     },
     {
         "id": 9,
         "name": "notebook9",
-        "price": 1000
+        "price": 1000,
+        "picture": 1
     }
 ]
 const generateItems = (needFilter, typeOfSort) => {
@@ -64,14 +73,19 @@ const generateItems = (needFilter, typeOfSort) => {
             cart.push(item)
             updateCart(cart)
         }
-        const itemElement = Item(item.name, item.price, onAdd);
-        if(needFilter){
-            if(FiltFunction(item.name, item.price) == true){
+        try{
+            const itemElement = Item(item.name, item.price, item.picture, onAdd);
+            if(needFilter){
+                if(FiltFunction(item.name, item.price) == true){
+                    ItemListElement.childNodes[0].appendChild(itemElement)
+                }
+            }
+            else{
                 ItemListElement.childNodes[0].appendChild(itemElement)
             }
         }
-        else{
-            ItemListElement.childNodes[0].appendChild(itemElement)
+        catch(err){
+            console.log(err.message)
         }
     })
     for(let i = 0; i < ItemListElement.childNodes[0].childNodes.length; i = i + 1){
