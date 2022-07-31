@@ -16,13 +16,13 @@
 
     & > span {
         display: block;
-        
     }
 
     &__name{
         font-size: 20px;
         text-transform: uppercase;
         font-weight: bold;
+        text-align: center;
     }
     &__price{
         font-size: 17px;

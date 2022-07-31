@@ -16,6 +16,7 @@ const ItemsList = (generateItems) => {
     const RadioGroup = document.createElement('div')
     const ApproveFilter = document.createElement('button')
     const ClearFilter = document.createElement('button')
+    const MessageSpan = document.createElement('span')
     let currentStateOfSort = 0
     ApproveFilter.className = 'items-list__sortPanel__approveFil'
     ApproveFilter.innerText = 'Применить'
@@ -36,6 +37,17 @@ const ItemsList = (generateItems) => {
     })
     ApproveFilter.onclick = function(){
         generateItems(true, currentStateOfSort)
+        MessageSpan.innerText = 'Применена сортировка и фильтр'
+        SortElement.appendChild(MessageSpan)
+        setTimeout(()=>{
+            SortElement.removeChild(MessageSpan)
+        },2000)
+        ApproveFilter.disabled = true
+        ClearFilter.disabled = true
+        setTimeout(()=>{
+            ApproveFilter.disabled = false
+            ClearFilter.disabled = false
+        },2000)
     }
     ClearFilter.onclick = function(){
         currentStateOfSort = 0
@@ -44,6 +56,17 @@ const ItemsList = (generateItems) => {
         SliderElement.value = 5000
         ValuePrice.innerText = 'Текущее значение: 5000'
         InputTextElement.value = ''
+        MessageSpan.innerText = 'Сброшена сортировка и отключен фильтр'
+        SortElement.appendChild(MessageSpan)
+        setTimeout(()=>{
+            SortElement.removeChild(MessageSpan)
+        },2000)
+        ApproveFilter.disabled = true
+        ClearFilter.disabled = true
+        setTimeout(()=>{
+            ApproveFilter.disabled = false
+            ClearFilter.disabled = false
+        },2000)
     }
     const FiltFunction = (name, price) =>{
         if(price <= Number(SliderElement.value)){
