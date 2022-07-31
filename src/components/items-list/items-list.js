@@ -70,7 +70,7 @@ const ItemsList = (generateItems) => {
     }
     const FiltFunction = (name, price) =>{
         if(price <= Number(SliderElement.value)){
-            if(InputTextElement.value == "" || name.includes(InputTextElement.value)){
+            if(InputTextElement.value == "" || name.toLowerCase().includes(InputTextElement.value.toLowerCase())){
                 return true;
             }
         }
